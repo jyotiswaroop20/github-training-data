@@ -1,0 +1,1000 @@
+  218  resize2fs /dev/vg1/lv1
+  219  df -hT
+  220  mount /dev/vg1/lv1 /test
+  221  mount /dev/vg1/lv1 /test1
+  222  cd /test
+  223  cd /test1
+  224  clear
+  225  lsblk
+  226  ls
+  227  cat cal.txt
+  228  clear
+  229  cd
+  230  clear
+  231  lsblk
+  232  rsync -avh /backup/ /tes1/
+  233  clear
+  234  rsync -avh /backup/ /test1/
+  235  clear
+  236  rsync -avh /test1/ /backup/
+  237  clear
+  238  vgs
+  239  lvs
+  240  umount /test1
+  241  fsck -f /dev/vg1/lv1
+  242  clear
+  243  vgs
+  244  lvs
+  245  resize2fs /dev/vg1/lv1 5G
+  246  lvreduce -L 5G /dev/vg1/lv1
+  247  resize2fs /dev/vg1/lv1 5G
+  248  fsck -f /dev/vg1/lv1
+  249  mount /dev/vg1/lv1 /test1
+  250  cd /test1
+  251  cat cal.txt
+  252  clear
+  253  cd
+  254  clear
+  255  vgs
+  256  lvs
+  257  pvs
+  258  vgs
+  259  lvs
+  260  clear
+  261  lsblk
+  262  clear
+  263  lsblk
+  264  vgs
+  265  pvs
+  266  vgs
+  267  clear
+  268  df -hT
+  269  umount /test1
+  270  clear
+  271  lvremove /dev/vg1/lv1
+  272  vgremove /dev/vg1
+  273  pvremove /dev/sda1 /dev/sda2 /dev/sdb1
+  274  clear
+  275  lsblk
+  276  fdisk /dev/sda
+  277  clear
+  278  lsblk
+  279  fdisk /dev/sdb
+  280  clear
+  281  partprobe
+  282  clear
+  283  lsblk
+  284  wipefs -a /dev/sda
+  285  wipefs -a /dev/sdb
+  286  clear
+  287  lsblk
+  288   ls
+  289  cd /
+  290  ls
+  291  rm tes1
+  292  rmdir tes1
+  293  clear
+  294  lsblk
+  295  clear
+  296  ls
+  297  mv test1 test
+  298  clear
+  299  ls
+  300  cd /backup
+  301  cd
+  302  rm -rf /backup
+  303  clear
+  304  cd /
+  305  clear
+  306  ls
+  307  cd
+  308  clear
+  309  dnf install git -y
+  310  clear
+  311  git --version
+  312  which git
+  313  git config --global user.name "jyotiswaroop20"
+  314  git config --global user.email "jyotiswaroop.niit1@gmail.com"
+  315  git config --list
+  316  git clone https://github.com/jyotiswaroop20/the-linux-diary.git
+  317  cd the-linux-diary
+  318  echo "Hello Linux World!" > hello4.txt
+  319  git add hello4.txt
+  320  git commit -m "Added hello4.txt"
+  321  git push origin main
+  322  git pull origin main
+  323  clear
+  324  ls
+  325  git rm hello.txt
+  326  git commit -m "Deleted hello.txt"
+  327  git push origin main
+  328  git rm hello2.txt
+  329  git commit -m "Deleted hello2.txt"
+  330  git push origin main
+  331  clear
+  332  git config --global credential.helper store
+  333  git rm hello3.txt
+  334  git commit -m "Deleted hello3.txt"
+  335  git push origin main
+  336  clear
+  337  git rm hello4.txt
+  338  git commit -m "Deleted hello4.txt"
+  339  git push origin main
+  340  clear
+  341  ls
+  342  git status
+  343  mkdir myproject
+  344  cd myproject
+  345  git init
+  346  echo "Hello" > file1.txt
+  347  cho "Log file" > debug.log
+  348  echo "Log file" > debug.log
+  349  mkdir temp
+  350  echo "Temporary" > temp/temp.txt
+  351  vim .gitignore
+  352  clear
+  353  ls
+  354  ls -al
+  355  git add .
+  356  git status
+  357  git commit -m "Added file1.txt and ignored others"
+  358  git push origin main
+  359  cd
+  360  cd -
+  361  cd ..
+  362  git push origin main
+  363  clear
+  364  ls
+  365  git push origin main
+  366  cd  myproject
+  367  git push origin main
+  368  cd
+  369  cd -
+  370  cd ..
+  371  clear
+  372  ls
+  373  git pull origin main
+  374  git push origin main
+  375  cd myproject
+  376  ls -al
+  377  cd ..
+  378  s
+  379  ls
+  380  clear
+  381  ls
+  382  git push origin main
+  383  git status
+  384  git add myproject/
+  385  git rm --cached -r myproject
+  386  rm -rf myproject/.git
+  387  clear
+  388  git add myproject
+  389  git commit -m "Added myproject folder (as normal folder)"
+  390  git push origin main
+  391  git rm myproject
+  392  git rm myproject -f
+  393  git commit -m "Deleted myproject"
+  394  git push origin main
+  395  clear
+  396  ls
+  397  mkdir mycv
+  398  cd mycv'
+  399  cd mycv
+  400  ll
+  401  cd
+  402  clear
+  403  cd -
+  404  cd ..
+  405  clear
+  406  ls
+  407  git push origin main
+  408  git add mycv
+  409  git commit -m "Added mycv"
+  410  git push origin main
+  411  git rm mycv
+  412  git rm mycv -r
+  413  git commit -m "Deleted mmycv"
+  414  git push origin main
+  415  clear
+  416  git diff --help
+  417  git help diff
+  418  git checkout -h
+  419  ls -al ~/.ssh
+  420  clear
+  421  ssh-keygen
+  422  git log --decorate --oneline --graph
+  423  clear
+  424  cd
+  425  clear
+  426  ls
+  427  yum repolist all
+  428  clear
+  429  rpm -qi stratisd stratis-cli -y
+  430  rpm -qi stratisd stratis-cli
+  431  clear
+  432  dnf install stratisd stratis-cli -y
+  433  clear
+  434  rpm -qi stratisd stratis-cli
+  435  clear
+  436  systemctl enable --now stratisd
+  437  systemctl status stratisd
+  438  clear
+  439  lsblk
+  440  blkid -p /dev/sda
+  441  mkfs.ext4 /dev/sda
+  442  blkid -p /dev/sda
+  443  wipefs -a /dev/sda
+  444  clear
+  445  blkid -p /dev/sda
+  446  clear
+  447  lsblk
+  448  stratis pool create mypool /dev/sda
+  449  lsblk
+  450  clear
+  451  stratis pool list
+  452  clear
+  453  stratis filesystem create mypool myfs
+  454  lsblk
+  455  lsblk -f
+  456  clear
+  457  lsblk -f
+  458  stratis fs list
+  459  clear
+  460  stratis fs list 
+  461  stratis fs list mypool
+  462  clear
+  463  mount /stratis/mypool/myfs /test1
+  464  clear
+  465  mount /stratis/mypool/myfs /test
+  466  clear
+  467  cd /
+  468  ls
+  469  cd
+  470  mkdir /stratis_mount
+  471  mount /stratis/mypool/myfs /stratis_mount
+  472  lsblk
+  473  lsblk -f
+  474  clear
+  475  cd /
+  476  ls
+  477  rmdir stratis_mount
+  478  clear
+  479  cd
+  480  mount dev/stratis/mypool/myfs /test
+  481  clear
+  482  mount /dev/stratis/mypool/myfs /test
+  483  df -hT
+  484  vim /etc/fstab
+  485  umount /test
+  486  df -hT
+  487  clear
+  488  mount -a
+  489  systemctl daemon-reload
+  490  df -hT
+  491  blkid -p /dev/stratis/mypool/myfs
+  492  umount /test
+  493  vim /ect/fstab
+  494  vim /etc/fstab
+  495  clear
+  496  lsblk -f
+  497  clear
+  498  df -hT
+  499  stratis pool add-data mypool /dev/sdb
+  500  stratis pool list
+  501  mount /dev/stratis/mypool/myfs /test
+  502  systemctl daemon-reload
+  503  clear
+  504  cd /test
+  505  touch {1..20}
+  506  cal > cal.txt
+  507  mkdir aa bb cc dd
+  508  clear
+  509  ls
+  510  cd
+  511  du -sh
+  512  du -sh /test
+  513  stratis filesystem snapshot mypool myfs snap1
+  514  stratis filesystem list
+  515  cd /test
+  516  rm -rf *
+  517  ls
+  518  ll
+  519  clear
+  520  cd
+  521  umount /dev/stratis/mypool/myfs /test
+  522  umount /dev/stratis/mypool/myfs
+  523  clear
+  524  umount /test
+  525  clear
+  526  df -hT
+  527  stratis filesystem snapshot mypool snap1 snap2
+  528  stratis filesystem list
+  529  mount /stratis/mypool/snap1 /test
+  530  mount /dev/stratis/mypool/snap1 /test
+  531  clear
+  532  ls
+  533  cd /test
+  534  ls
+  535  du -sh .
+  536  cat cal.txt
+  537  df -ht
+  538  cd
+  539  df -hT
+  540  umount /test
+  541  clear
+  542  stratis filesystem destroy mypool snap1
+  543  stratis filesystem destroy mypool snap2
+  544  stratis filesystem list
+  545  stratis pool list
+  546  stratis filesystem destroy mypool myfs
+  547  stratis filesystem list
+  548  stratis filesystem destroy mypool myfs
+  549  stratis filesystem destroy mypool
+  550  stratis pool destroy mypool
+  551  clear
+  552  lsblk
+  553  lsblk -f
+  554  clear
+  555  blkid -p /dev/sda
+  556  wipefs -s /dev/sda
+  557  wipefs -a /dev/sda
+  558  clear
+  559  lsblk
+  560  init 0
+  561  clear
+  562  git config --list
+  563  git --version
+  564  ls
+  565  cd the-linux-diary
+  566  dnf install python
+  567  clear
+  568  ls
+  569  vim testing.py
+  570  ./testing.py
+  571  python3 --version
+  572  python3 testing.py
+  573  clear
+  574  ls
+  575  python testing.py
+  576  clear
+  577  ls testing.py
+  578  ls -l testing.py
+  579  ls -al
+  580  cd
+  581  l
+  582  ls
+  583  mkdir test-python-data
+  584  mv the-linux-diary/testing.pv ~/test-python-data
+  585  mv the-linux-diary/testing.py ~/test-python-data
+  586  clear
+  587  ls
+  588  cd test-python-data
+  589  ls
+  590  ls -al
+  591  rm testing.py
+  592  git init
+  593  ls -al
+  594  clear
+  595  cd
+  596  ls 
+  597  cd the-linux-diary
+  598  cd
+  599  clear
+  600  cd test-python-data
+  601  clear
+  602  ls -al
+  603  git status
+  604  vim testing.py
+  605  python testing.py
+  606  clear
+  607  ls -al
+  608  git status
+  609  git add testing.py
+  610  git status
+  611  git rm --cached
+  612  git status
+  613  clear
+  614  git status
+  615  git rm --cached python.py
+  616  git status
+  617  git rm --cached python.py
+  618  clear
+  619  git rm --cached testing.py
+  620  clear
+  621  git status
+  622  git add .
+  623  clear
+  624  git status
+  625  ls -al
+  626  git commit -m "added testing files"
+  627  git status
+  628  clear
+  629  ls
+  630  rm testing.py
+  631  clear
+  632  ls -al
+  633  git status
+  634  git restore testing.py
+  635  clear
+  636  ls -al
+  637  git status
+  638  cd
+  639  clear
+  640  ls
+  641  clear
+  642  lsblk
+  643  lvs
+  644  clear
+  645  lsblk
+  646  fdisk /dev/sda
+  647  partprobe /dev/sda
+  648  clear
+  649  lsblk
+  650  vgcreate vg1 /dev/sda1
+  651  lvcreate -L 3G -n lv1 vg1
+  652  lvs
+  653  clear
+  654  mkfs.ext4 /dev/vg1/lv1
+  655  clear
+  656  ldblk -f
+  657  clear
+  658  lsblk -f
+  659  mount /dev/vg1/lv1 /test
+  660  clear
+  661  df -ht
+  662  clear
+  663  df -hT
+  664  vgs
+  665  lvs
+  666  clear
+  667  cd /test
+  668  touch {1..20}
+  669  cal > cal.txt
+  670  mkdir aa bb cc dd
+  671  clear
+  672  ls
+  673  cat /dev/zero > file.txt
+  674  clear
+  675  ls -l
+  676  clear
+  677  ls -ah
+  678  clear
+  679  ls -lah
+  680  du -sh
+  681  clear
+  682  lvs
+  683  cd
+  684  clear
+  685  lvcreate -L 2G -s -n snap1 /dev/vg1/lv1
+  686  lvs
+  687  lvcreate -L 1G -s -n snap1 /dev/vg1/lv1
+  688  clear
+  689  lvs
+  690  cd /test
+  691  rm -rf *
+  692  du -sh
+  693  clear
+  694  ls -al
+  695  clear
+  696  cd
+  697  umount /test
+  698  lvconvert --merg /dev/vg1/lv1
+  699  lvconvert --merge /dev/vg1/lv1
+  700  lvs
+  701  lvremove /dev/vg1/lv1
+  702  clear
+  703  vgs
+  704  lvs
+  705  lvcreate -L 3G -n lv1 vg1
+  706  clear
+  707  mkfs.ext4 /dev/vg1/lv1
+  708  mount /dev/vg1/lv1 /test
+  709  cd /test
+  710  touch {1..20}
+  711  cal > cal.txt
+  712  mkdir aa bb cc dd
+  713  dd if=/dev/zero of=/test/file.txt bs=1M count=100
+  714  clear
+  715  ls
+  716  ls -lah file.txt
+  717  clear
+  718  cd
+  719  du -sh
+  720  du -sh /test
+  721  lvcreate -L 1G -s -n snap1 /dev/vg1/lv1
+  722  lvs
+  723  cd /test
+  724  rm -rf *
+  725  clear
+  726  ll
+  727  cd
+  728  umount
+  729  umount /test
+  730  clear
+  731  lvconvert --merg /dev/vg1/lv1
+  732  lvconvert --merge /dev/vg1/lv1
+  733  lvremove /dev/vg1/lv1
+  734  clear
+  735  lvcreate -L 3G -n lv1 vg1
+  736  mkfs.ext4 /dev/vg1/lv1
+  737  clear
+  738  mouunt /dev/vg1/lv1 /test
+  739  mount /dev/vg1/lv1 /test
+  740  cd /test
+  741  dd if=/dev/zero of=/test/file.txt bs=1M count=100
+  742  clear
+  743  ls -alh
+  744  du -sh
+  745  cd
+  746  lvcreate --size 1G --snapshot --name lv1_snap --trackchanges y /dev/vg1/lv1
+  747  lvcreate --size 1G --snapshot --name lv1_snap /dev/vg1/lv1
+  748  clear
+  749  lvs
+  750  cd /test
+  751  rm -rf *
+  752  ll
+  753  cd
+  754  umount /test
+  755  df -hT
+  756  clear
+  757  lvconvert --merge /dev/vg1/lv1_snap
+  758  lvs
+  759  lvchange -an /dev/vg1/lv1
+  760  lvs
+  761  lvchange -ay /dev/vg1/lv1
+  762  lvs
+  763  mount /dev/vg1/lv1 /test
+  764  cd /test
+  765  clear
+  766  ll
+  767  lslbk
+  768  du -sh
+  769  clear
+  770  lsblk
+  771  clear
+  772  ll
+  773  cd
+  774  lvcreate --size 200M --snapshot --name lv1_snap /dev/vg1/lv1
+  775  lvs
+  776  cd /test
+  777  dd if=/dev/zero of=/test/file.txt bs=1M count=200
+  778  ls -lh
+  779  lvs
+  780  df
+  781  clear
+  782  ls
+  783  grep snapshot /var/log/messages
+  784  clear
+  785  rm -rf *
+  786  cd
+  787  umount /test
+  788  df -hT
+  789  lvconvert --merge /dev/vg1/lv1_snap
+  790  lvextend -L +1G /dev/vg1/lv1_snap
+  791  clear
+  792  lvs
+  793  lvremove /dev/vg1/lv1_snap
+  794  clear
+  795  lvs
+  796  vim /etc/lvm/lvm.conf
+  797  mount /dev/vg1/lv1
+  798  mount /dev/vg1/lv1 /test
+  799  clear
+  800  cd /test
+  801  dd if=/dev/zero of=/test/file.txt bs=1M count=100
+  802  clear
+  803  du -sh
+  804  cd
+  805  lvcreate --size 200M --snapshot --name lv1_snap /dev/vg1/lv1
+  806  lvs
+  807  cd /test
+  808  dd if=/dev/zero of=/test/file.txt bs=1M count=40
+  809  lvs
+  810  du -sh
+  811  dd if=/dev/zero of=/test/file1.txt bs=1M count=100
+  812  clear
+  813  ll
+  814  du -sh
+  815  lvs
+  816  dd if=/dev/zero of=/test/file3.txt bs=1M count=50
+  817  clear
+  818  du -sh
+  819  lvs
+  820  du -sh
+  821  dd if=/dev/zero of=/test/file3.txt bs=1M count=39
+  822  du -sh
+  823  lvs
+  824  vgs
+  825  rm -rf *
+  826  cd
+  827  umount /test
+  828  clear
+  829  lvconvert --merge /dev/vg1/lv1_snap
+  830  lvchange -an /dev/vg1/lv1
+  831  lvs
+  832  lvchange -ay /dev/vg1/lv1
+  833  lvs
+  834  mount /dev/vg1/lv1 /test
+  835  cd /test
+  836  ll
+  837  ls -alh
+  838  lvs
+  839  vgs
+  840  lvremove /dev/vg1/lv1
+  841  cd
+  842  umount /test
+  843  clear
+  844  lvremove /dev/vg1/lv1
+  845  vgreamove
+  846  vgreamove /dev/vg1
+  847  vgremove /dev/vg1
+  848  pvremove /dev/sda1
+  849  clear
+  850  lsblk
+  851  wipefs -a /dev/sda1
+  852  fdisk /dev/sda
+  853  partprobe
+  854  clear
+  855  lsblk
+  856  wipefs -a /dev/sda
+  857  blkid -p /dev/sda
+  858  clear
+  859  wipefs -a /dev/sdb
+  860  clear
+  861  lsblk
+  862  clear
+  863  ls
+  864  history
+  865  clear
+  866  dnf list installed | grep cryptsetup
+  867  dnf install cryptsetup -y
+  868  clear
+  869  lsblk
+  870  clear
+  871  fdisl -l /dev/sdb
+  872  fdisk -l /dev/sdb
+  873  clear
+  874  cryptsetup luksFormat /dev/sdb
+  875  clear
+  876  cryptsetup luksFormat /dev/sdb
+  877  cryptsetup luksOpen /dev/sdb myfiles
+  878  lsblk
+  879  lsblk -f
+  880  clear
+  881  cryptsetup status myfile
+  882  lsblk
+  883  cryptsetup status myfiles
+  884  ls -lthr /dev/mapper/myfiles
+  885  mkfs.ext4 /dev/mapper/myfiles
+  886  clear
+  887  lsblk -f
+  888  mount /dev/mapper/myfiles /test
+  889  df -hT
+  890  clear
+  891  umount /test
+  892  df -hT
+  893  clear
+  894  vim /etc/fstab
+  895  dd if=/dev/urandom of=/tmp/crypt_file bs=4096 count=1
+  896  ls -lah /tmp/crypt_file
+  897  chmod 600 /tmp//tmp/crypt_file
+  898  chmod 600 /tmp/crypt_file
+  899  clear
+  900  ls -lah /tmp/crypt_file
+  901  mv /tmp/crypt_file /etc/
+  902  ls -alh /etc/crypt_file
+  903  cryptsetup luksAddKey /dev/sdb /etc/crypt_file
+  904  vim /etc/crypttab
+  905  vim /etc/fstab
+  906  clear
+  907  mount -a
+  908  systemctl daemon-reload
+  909  df -hT
+  910  init 6
+  911  clear
+  912  df -hT
+  913  lsblk
+  914  clear
+  915  cd /test
+  916  ls -al
+  917  cd
+  918  clear
+  919  df -hT
+  920  clear
+  921  history
+  922  clear
+  923  chmod 777 /test
+  924  cd /test
+  925  cal > cal.txt
+  926  touch {1..10}
+  927  mkdir aa bb cc dd
+  928  clear
+  929  su atripathi
+  930  clear
+  931  cd
+  932  umount /test
+  933  df -ht
+  934  df -hT
+  935  clear
+  936  lsblk
+  937  cryptsetup luksClose myfiles
+  938  lsblk
+  939  history
+  940  clear
+  941  ls -lthr /dev/mapper/myfiles
+  942  history
+  943  clear
+  944  mount /dev/mapper/myfiles /test
+  945  clear
+  946  cryptsetup luksOpen /dev/sdb myfiles
+  947  cryptsetup status myfiles
+  948  cryptsetup luksClose myfiles
+  949  cryptsetup status myfiles
+  950  cryptsetup luksOpen /dev/sdb myfiles
+  951  mount -a
+  952  cd /test
+  953  su atripathi
+  954  cryptsetup luksChangeKey /dev/sdb
+  955  cd
+  956  umount /test
+  957  df -hT
+  958  clear
+  959  vim /etc/fstab
+  960  cryptsetup luksRemoveKey /dev/sdb
+  961  cryptsetup luksClose myfiles
+  962  cryptsetup luksremove /dev/sdb
+  963  lsblk
+  964  cryptsetup luksremove myfiles
+  965  cryptsetup luksRemove myfiles
+  966  clear
+  967  cryptsetup --help
+  968  clear
+  969  vim /etc/crypttab
+  970  clear
+  971  lsblk -f
+  972  cryptsetup luksClose myfiles
+  973  wipefs -a /dev/sdb
+  974  clear
+  975  lsblk -f
+  976  mkfs.ext4 /dev/sdb
+  977  mount /dev/sdb /test
+  978  systemctl daemon-reload
+  979  ls /test
+  980  umount /test
+  981  clear
+  982  lsblk
+  983  lsblk -f
+  984  wipefs -s /dev/sdb
+  985  wipefs -a /dev/sdb
+  986  clear
+  987  lsblk
+  988  blkid -p /dev/sdb
+  989  clear
+  990  wipefs -a /dev/sdb
+  991  clear
+  992  lsblk
+  993  lsblk -f
+  994  clear
+  995  init 0
+  996  clear
+  997  ls /
+  998  ll /
+  999  clear
+ 1000  init 0
+ 1001  clear
+ 1002  lsblk
+ 1003  clear
+ 1004  fdisk /dev/sda
+ 1005  partprobe
+ 1006  clear
+ 1007  lsblk
+ 1008  pvcreate /dev/sda1
+ 1009  vgcreate vg1 /dev/sda1
+ 1010  clear
+ 1011  vgs
+ 1012  lvcreate -L 5G -n lv1 vg1
+ 1013  clear
+ 1014  lvs
+ 1015  vgs
+ 1016  mkfs.ext4 /dev/vg1/lv1
+ 1017  clear
+ 1018  lsblk -f
+ 1019  clear
+ 1020  mount /dev/vg1/lv1 /test
+ 1021  clear
+ 1022  cd /test
+ 1023  touch {1..20}
+ 1024  cal > cal.txt
+ 1025  mkdir aa bb cc dd
+ 1026  clear
+ 1027  ls
+ 1028  cd
+ 1029  umount /test
+ 1030  clear
+ 1031  lsblk
+ 1032  lvremove /dev/vg1/lv1
+ 1033  clear
+ 1034  lvs
+ 1035  ls /etc/lvm/archive/
+ 1036  ls -l /etc/lvm/archive/
+ 1037  clear
+ 1038  ls -al /etc/lvm/archive/
+ 1039  clear
+ 1040  ls -ltrh /etc/lvm/archive/
+ 1041  clear
+ 1042  ls -ltrh /etc/lvm/archive/ | grep lv1
+ 1043  ls -ltrh /etc/lvm/archive/ | grep vg1
+ 1044  vgcfgrestore vg1 --test -f /etc/lvm/archive/vg1_00053-2127223593.vg
+ 1045  clear
+ 1046  vgcfgrestore vg1 -f /etc/lvm/archive/vg1_00053-2127223593.vg
+ 1047  lvs
+ 1048  lvchange -ay /dev/vg1/lv1
+ 1049  clear
+ 1050  lvs
+ 1051  vgscan
+ 1052  clear
+ 1053  lvscan
+ 1054  clear
+ 1055  mount /dev/vg1/lv1 /test
+ 1056  cd /test
+ 1057  clear
+ 1058  ls
+ 1059  cat cal.txt
+ 1060  cd
+ 1061  umount /test
+ 1062  clear
+ 1063  ls -al /etc/lvm/archive/
+ 1064  clear
+ 1065  ls -ltrh /etc/lvm/archive/ | grep lv1
+ 1066  ls -ltrh /etc/lvm/archive/ | grep vg1
+ 1067  clear
+ 1068  df -hT
+ 1069  lvremove /dev/vg1/lv1
+ 1070  ls -ltrh /etc/lvm/archive/ | grep vg1
+ 1071  clear
+ 1072  vgcfgrestore vg1 --test -f /etc/lvm/archive/vg1_00054-2109286544.vg
+ 1073  vgcfgrestore vg1 -f /etc/lvm/archive/vg1_00054-2109286544.vg
+ 1074  lvs
+ 1075  lvchange -ay /dev/vg1/lv1
+ 1076  clear
+ 1077  lvs
+ 1078  mount /dev/vg1/lv1 /test
+ 1079  clear
+ 1080  cd /test
+ 1081  ls
+ 1082  cat cal.txt
+ 1083  cd
+ 1084  clear
+ 1085  lvs
+ 1086  cd /etc/lvm
+ 1087  vim lvm.conf
+ 1088  cd
+ 1089  clear
+ 1090  lvcreate -L 1G --snapshot -n lvm_snap /dev/vg1/lv1
+ 1091  lvs
+ 1092  cd /test
+ 1093  du -sh
+ 1094  vgs
+ 1095  dd if=/dev/zero of=/test/file.txt bs=1M count=800
+ 1096  lvs
+ 1097  du -sh
+ 1098  clear
+ 1099  vgs
+ 1100  lvs
+ 1101  dd if=/dev/zero of=/test/file.txt bs=1M count=200
+ 1102  clear
+ 1103  du -sh
+ 1104  lvs
+ 1105  dd if=/dev/zero of=/test/file1.txt bs=1M count=800
+ 1106  clear
+ 1107  du -sh
+ 1108  lvs
+ 1109  vgs
+ 1110  rm -rf *
+ 1111  clear
+ 1112  ll
+ 1113  cd
+ 1114  umount /test
+ 1115  clear
+ 1116  lvs
+ 1117  lvconvert --merge /dev/vg1/lvm_snap
+ 1118  clear
+ 1119  lvs
+ 1120  lvconvert --merge /dev/vg1/lvm_snap
+ 1121  lvremove /dev/vg1/lvm_snap
+ 1122  clear
+ 1123  lvs
+ 1124  vgs
+ 1125  clear
+ 1126  vim /etc/lvm/lvm.conf
+ 1127  clear
+ 1128  lvs
+ 1129  clear
+ 1130  mount /dev/vg1/lv1 /test
+ 1131  cd /test
+ 1132  clear
+ 1133  dd if=/dev/zero of=/test/file1.txt bs=1M count=200
+ 1134  clear
+ 1135  ll
+ 1136  cd
+ 1137  lvcreate -L 1G --snapshot -n snap1 /dev/vg1/lv1
+ 1138  lvs
+ 1139  cd /test
+ 1140  dd if=/dev/zero of=/test/file1.txt bs=1M count=550
+ 1141  clear
+ 1142  du -sh
+ 1143  lvs
+ 1144  dd if=/dev/zero of=/test/file2.txt bs=1M count=200
+ 1145  clear
+ 1146  du -sh
+ 1147  lvs
+ 1148  lvscan
+ 1149  clear
+ 1150  lvs
+ 1151  du -sh
+ 1152  dd if=/dev/zero of=/test/file3.txt bs=1M count=200
+ 1153  du -sh
+ 1154  clear
+ 1155  lvs
+ 1156  lvscan
+ 1157  clear
+ 1158  lvs
+ 1159  vgs
+ 1160  dd if=/dev/zero of=/test/file3.txt bs=1M count=200
+ 1161  dd if=/dev/zero of=/test/file4.txt bs=1M count=200
+ 1162  du -sh
+ 1163  clear
+ 1164  lvscan
+ 1165  lvs
+ 1166  vgs
+ 1167  ll
+ 1168  rm -rf *
+ 1169  ll
+ 1170  clear
+ 1171  cd
+ 1172  lvconvert --merge /dev/vg1/snap1
+ 1173  lvs
+ 1174  lvscan
+ 1175  clear
+ 1176  cd /test
+ 1177  cd
+ 1178  lvs
+ 1179  lvchange -an /dev/vg1/lv1
+ 1180  umount /test
+ 1181  clear
+ 1182  lvchange -an /dev/vg1/lv1
+ 1183  lvchange -ay /dev/vg1/lv1
+ 1184  clear
+ 1185  mount /dev/vg1/lv1 /test
+ 1186  cd /test
+ 1187  ll
+ 1188  cd
+ 1189  lsblk
+ 1190  clear
+ 1191  umount /test
+ 1192  df -ht
+ 1193  clear
+ 1194  df -hT
+ 1195  lvremove /dev/vg1.lv1
+ 1196  lvremove /dev/vg1/lv1
+ 1197  clear
+ 1198  vgremove /dev/vg1
+ 1199  pvremove /dev/sda
+ 1200  lsblk
+ 1201  pvremove /dev/sdaa
+ 1202  pvremove /dev/sda1
+ 1203  clear
+ 1204  lsblk
+ 1205  fdisk /dev/sda
+ 1206  partprobe
+ 1207  clear
+ 1208  lsblk
+ 1209  wipefs -a /dev/sda
+ 1210  clear
+ 1211  lsblk
+ 1212  clear
+ 1213  ls
+ 1214  cd test-python-data
+ 1215  ll
+ 1216  git status
+ 1217  history > history.txt
